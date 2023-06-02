@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search</title>
+</head>
+<body>
+    <h1>Search</h1>
+
+    {% if error_message %}
+        <p>{{ error_message }}</p>
+    {% endif %}
+
+    <form action="{% url 'search' %}" method="post">
+        {% csrf_token %}
+        <label for="keyword">Keyword:</label>
+        <input type="text" id="keyword" name="keyword" required><br><br>
+        <input type="submit" value="Search">
+    </form>
+
+    {% if video_segments %}
+        <h2>Search Results:</h2>
+        <ul>
+            {% for video_segment in video_segments %}
+                <li>
+                    <strong>Video:</strong> {{ video_segment.video.title }}<br>
+                    <strong>Timestamp:</strong> {{ video_segment.timestamp }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
