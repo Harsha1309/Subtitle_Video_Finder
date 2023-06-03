@@ -41,7 +41,6 @@ class SearchView(View):
 
         if keyword:
             # # Query the SubtitleKeyword model using DynamoDB
-            # dynamodb_client = boto3.client('dynamodb', aws_access_key_id='AKIASFFY7HJZBYVHOZ4U', aws_secret_access_key='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', region_name='ap-south-1')
             response = settings.dynamodb_client.scan(
                 TableName='Subtitles',
                 FilterExpression='contains(#k, :v)',
