@@ -1,6 +1,4 @@
-# Subtitle_Video_Finder
-
-# Video Processing Website
+# Subtitle Video Finder Website
 
 This repository contains the code for a web application that allows users to upload videos, process them in the background, and search for specific keywords within the video subtitles. The application is built using Django and utilizes AWS services such as S3 for storing video files and DynamoDB for storing subtitles.
 
