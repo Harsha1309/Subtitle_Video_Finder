@@ -101,4 +101,4 @@ Please note that the deployment process may vary depending on your specific host
 
 ## Contributing
 
-Contributions to the video processing website are welcome! If you find any issues or have suggestions for improvements, please feel free
+Contributions to the Subtitle Video Finder website are welcome! If you find any issues or have suggestions for improvements, please feel free
